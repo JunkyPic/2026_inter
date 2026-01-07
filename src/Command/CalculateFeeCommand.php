@@ -1,13 +1,13 @@
 <?php
 
-namespace Lendable\Interview\Command;
+namespace App\Interview\Command;
 
-use Lendable\Interview\Exception\InvalidAmountException;
-use Lendable\Interview\Exception\InvalidTermException;
-use Lendable\Interview\Exception\MissingDataException;
-use Lendable\Interview\Repository\FileTermRepository;
-use Lendable\Interview\Service\FeeService;
-use Lendable\Interview\ValueObject\InputContext;
+use App\Interview\Exception\InvalidAmountException;
+use App\Interview\Exception\InvalidTermException;
+use App\Interview\Exception\MissingDataException;
+use App\Interview\Repository\FileTermRepository;
+use App\Interview\Service\FeeService;
+use App\Interview\ValueObject\InputContext;
 
 readonly class CalculateFeeCommand
 {
@@ -26,8 +26,6 @@ readonly class CalculateFeeCommand
                 'php://stderr',
                 ($e instanceof InvalidTermException) ? self::INVALID_INPUT_TERM : self::INVALID_INPUT_AMOUNT
             );
-            // Upon failure, the script must print any errors to stderr and exit with status code non-zero
-            // not sure if you guys meant the actual language construct "exit" or just return a response and finish execution
             return;
         }
 
@@ -43,8 +41,6 @@ readonly class CalculateFeeCommand
         }
 
         echo number_format($feeDto->fee, 2) . PHP_EOL;
-        // "Upon successful execution, the script MUST print the resulting fee to stdout followed by a line feed (\n) and exit with status code zero"
-        // not sure if you guys meant the actual language construct "exit" or just return a response and finish execution
         echo self::SUCCESS;
     }
 }

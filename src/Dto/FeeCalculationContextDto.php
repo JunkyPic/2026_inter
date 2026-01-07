@@ -1,8 +1,8 @@
 <?php
 
-namespace Lendable\Interview\Dto;
+namespace App\Interview\Dto;
 
-use Lendable\Interview\Model\Term;
+use App\Interview\Model\Term;
 
 readonly class FeeCalculationContextDto
 {

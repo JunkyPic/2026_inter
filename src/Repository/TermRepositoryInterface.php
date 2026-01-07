@@ -1,6 +1,6 @@
 <?php
 
-namespace Lendable\Interview\Repository;
+namespace App\Interview\Repository;
 
 interface TermRepositoryInterface
 {

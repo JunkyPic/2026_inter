@@ -1,6 +1,6 @@
 <?php
 
-namespace Lendable\Interview\Model;
+namespace App\Interview\Model;
 
 class Term
 {

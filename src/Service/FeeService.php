@@ -1,13 +1,13 @@
 <?php
 
-namespace Lendable\Interview\Service;
+namespace App\Interview\Service;
 
-use Lendable\Interview\Dto\FeeCalculationContextDto;
-use Lendable\Interview\Dto\FeeDto;
-use Lendable\Interview\Exception\MissingDataException;
-use Lendable\Interview\Policy\Fee\LinearInterpolationFeePolicy;
-use Lendable\Interview\Repository\TermRepositoryInterface;
-use Lendable\Interview\ValueObject\InputContext;
+use App\Interview\Dto\FeeCalculationContextDto;
+use App\Interview\Dto\FeeDto;
+use App\Interview\Exception\MissingDataException;
+use App\Interview\Policy\Fee\LinearInterpolationFeePolicy;
+use App\Interview\Repository\TermRepositoryInterface;
+use App\Interview\ValueObject\InputContext;
 
 readonly class FeeService
 {
@@ -31,8 +31,6 @@ readonly class FeeService
             );
         }
 
-        // this can be moved to a factory if at any point a new type of fee calculation is needed
-        // but for now keeping it simple feels like the best choice
         $policy = new LinearInterpolationFeePolicy();
 
         $fee = $policy->calculateFee(new FeeCalculationContextDto(

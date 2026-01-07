@@ -1,6 +1,6 @@
 <?php
 
-namespace Lendable\Interview\Dto;
+namespace App\Interview\Dto;
 
 readonly class FeeDto
 {

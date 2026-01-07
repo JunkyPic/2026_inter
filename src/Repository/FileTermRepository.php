@@ -1,8 +1,8 @@
 <?php
 
-namespace Lendable\Interview\Repository;
+namespace App\Interview\Repository;
 
-use Lendable\Interview\Model\Term;
+use App\Interview\Model\Term;
 
 class FileTermRepository implements TermRepositoryInterface
 {
@@ -11,7 +11,7 @@ class FileTermRepository implements TermRepositoryInterface
      */
     public function findLowerAndUpperTermsByTermAndAmount(int $term, float $amount): array
     {
-        $data = require_once __DIR__ . "/../../data.php";
+        $data = require_once __DIR__ . "<FILE_HERE>";
 
         $filteredData = [];
         foreach ($data as $row) {

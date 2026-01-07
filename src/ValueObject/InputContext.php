@@ -1,9 +1,9 @@
 <?php
 
-namespace Lendable\Interview\ValueObject;
+namespace App\Interview\ValueObject;
 
-use Lendable\Interview\Exception\InvalidAmountException;
-use Lendable\Interview\Exception\InvalidTermException;
+use App\Interview\Exception\InvalidAmountException;
+use App\Interview\Exception\InvalidTermException;
 use NumberFormatter;
 
 readonly class InputContext

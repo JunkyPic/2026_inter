@@ -1,8 +1,8 @@
 <?php
 
-namespace Lendable\Interview\Policy\Fee;
+namespace App\Interview\Policy\Fee;
 
-use Lendable\Interview\Dto\FeeCalculationContextDto;
+use App\Interview\Dto\FeeCalculationContextDto;
 
 interface FeePolicyInterface
 {
